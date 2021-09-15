@@ -4,58 +4,104 @@
 <head>
     <meta charset="UTF-8">
     <title>CV</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <table>
-        <tr>
-            <td>
-                <img src="https://storage.myseldon.com/news_pict_F5/F58016E248BFC0CC288FA71B585635F4" alt="моё фото"
-                    width="200">
-            </td>
-            <td>
+    <div class="container">
+        <div class="info">
+            <img src="https://storage.myseldon.com/news_pict_F5/F58016E248BFC0CC288FA71B585635F4" alt="моё фото"
+                class="avatar">
+            <div class="info-text">
                 <h1>Храмков Евгений</h1>
-                <p>канд. техн. наук, программист, ученый</p>
-            </td>
-        </tr>
-    </table>
-    <hr>
-    <h2>Хобби</h2>
-    <ul>
-        <li>рисование</li>
-        <li>сноубординг</li>
-        <li>сериалы</li>
-    </ul>
-    <hr>
-    <h2>Опыт работы</h2>
-    <table>
-        <tr>
-            <th>Организация</th>
-            <th>Должность</th>
-            <th>Годы</th>
-        </tr>
-        <tr>
-            <td>РосНИТИ</td>
-            <td>инженер</td>
-            <td>2012 - 2015</td>
-        </tr>
-        <tr>
-            <td>РосНИТИ</td>
-            <td>мнс</td>
-            <td>2015 - 2017</td>
-        </tr>
-    </table>
-    <hr>
-    <h2>Связаться со мной</h2>
-    <form action="#">
-        <label for="name">Ваше имя:</label>
-        <input type="text" id="name">
-        <br>
-        <label for="email">Email:</label>
-        <input type="email" id="email">
-        <br>
-        <input type="submit">
-    </form>
+                <p> <em>
+                        <strong>Канд. техн. наук,</strong>
+                        программист, ученый</em></p>
+                <p>Учусь кодить</p>
+                <h4>Мои социальные сети</h4>
+
+                <a href="https://www.instagram.com/hrevvl/?hl=ru" target="_blank">Instagram</a>
+                |
+                <a href="hhttps://vk.com/khramkoff" target="_blank">Вконтакте</a>
+            </div>
+        </div>
+
+        <div class="card bg-yellow">
+            <h2>Хобби</h2>
+            <ol class="list">
+                <li>Рисование</li>
+                <li>Сноубординг</li>
+                <li>Сериалы</li>
+            </ol>
+        </div>
+        <div class="card bg-green">
+            <h2>Опыт работы</h2>
+            <table class="table">
+                <tr>
+                    <td>РосНИТИ</td>
+                    <td>инженер</td>
+                    <td>2012 - 2015</td>
+                </tr>
+                <tr>
+                    <td>РосНИТИ</td>
+                    <td>мнс</td>
+                    <td>2015 - 2017</td>
+                </tr>
+                <tr>
+                    <td>РосНИТИ</td>
+                    <td>нс</td>
+                    <td>2017 - 2017</td>
+                </tr>
+                <tr>
+                    <td>РосНИТИ</td>
+                    <td>зав. лаб.</td>
+                    <td>2017 - 2019</td>
+                </tr>
+                <tr>
+                    <td>ТМК НТЦ</td>
+                    <td>зам. нач. лаб.</td>
+                    <td>2019 - 2021</td>
+                </tr>
+            </table>
+        </div>
+        <div class="card bg-red">
+            <h2>YouTube</h2>
+            <ul class="link-list">
+                <li>
+                    <a href="https://www.youtube.com/watch?v=6WxACOHm0_g">Какой-то курс</a>
+                </li>
+                <li>
+                    <a href="https://typographica.org/on-typography/roboto-typeface-is-a-four-headed-frankenstein/">Что-то
+                        еще</a>
+                </li>
+            </ul>
+        </div>
+        <div class="contact">
+            <h2>Связаться со мной</h2>
+            <form action="/">
+                <div class="row">
+                    <div class="form-group">
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" id="name" placeholder="Введите ваше имя...">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Введите email...">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="text">Ваше сообщение:</label>
+                    <textarea type="text" rows="2" id="text"></textarea>
+                </div>
+                <input type="submit" value="Связаться!" class="btn">
+            </form>
+        </div>
+
+        <div class="position">
+            <div class="box"></div>
+        </div>
+    </div>
+    <div style="margin-bottom: 500px;"></div>
 </body>
 
 </html>
