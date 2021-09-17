@@ -18,7 +18,7 @@ startBtn.addEventListener('click', (event) => {
 container.addEventListener('click', event => {
     if (event.target.classList.contains('card')) {
         console.log('card.style.background-color :>> ', event.target.style.background);
-        event.target.hide
+        event.target.remove()
     }
 })
 
