@@ -1,5 +1,3 @@
-// import getResult from "getResult"
-// import("/getResult.js")
 const container = document.querySelector('.container')
 const startBtn = document.querySelector('#start')
 const continueBtn = document.querySelector('#continue')
@@ -7,8 +5,8 @@ const cards = document.querySelectorAll('.card')
 const screens = document.querySelectorAll('.screen')
 const h1start = document.querySelector('#h1start')
 
-const colorSet = ['#1a497f', '#203459', '#1f3056', 'yellow', 'blue', 'white', 'black', 'violet']
-let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'white', 'black', 'violet']
+const colorSet = ['#191970', '#2E8B57', '#FF4500', '#FFFFE0', '#800080', '#8B4513', '#000000', '#808080']
+let colors = ['#191970', '#2E8B57', '#FF4500', '#FFFFE0', '#800080', '#8B4513', '#000000', '#808080']
 let counter = 0
 let result = ''
 let arr1 = new Array()
@@ -26,6 +24,9 @@ startBtn.addEventListener('click', (event) => {
     event.preventDefault()
     setCardColors()
     screens[0].classList.add('up')
+    if (startBtn.innerHTML == 'Пройти тест повторно') {
+        location.reload()
+    }
 })
 
 container.addEventListener('click', event => {
@@ -34,22 +35,21 @@ container.addEventListener('click', event => {
         result += indexColor
         event.target.hidden = 'true'
         checkCards()
-        console.log('result :>> ', result);
     }
 })
 
 function checkCards() {
     counter++
-    const card = document.querySelector('.card')
     if (counter === 7) {
         counter = 0
         colors = colorSet.slice(0)
-        console.log('colors :>> ', colors);
         if (result.length > 13) {
             separateString(result)
-            console.log('arr1 :>> ', arr1);
-            console.log('arr2 :>> ', arr2);
-            result = 0
+            screens[0].classList.remove('up')
+            h1start.innerHTML = 'Результат'
+            document.querySelector('p').innerHTML = 'все у тебя заебись, выше нос: ' + arr1 + arr2
+            startBtn.innerHTML = 'Пройти тест повторно'
+            return
         }
         cards.forEach((card) => {
             card.hidden = false
